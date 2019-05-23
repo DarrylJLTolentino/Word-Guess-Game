@@ -50,9 +50,9 @@ document.onkeyup = function (event) {
             counter++;
         }
     }
-    // if (counter === chosenword.length) {
-    //     guess--;
-    // }
+    if (counter === chosenWord.length) {
+        guess--;
+    }
     
 
 }
