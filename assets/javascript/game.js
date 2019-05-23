@@ -44,14 +44,4 @@ document.onkeyup = function (event) {
     
     joinedLettersGuessed = lettersGuessed.join(",");
 
-    document.getElementById("getStarted").textContent = "";
-    document.getElementById("wins").textContent = "Wins: " + wins;
-    document.getElementById("losses").textContent = "Losses " + losses;
-    document.getElementById("spacing").textContent = "-----------------";
-    document.getElementById("word").textContent = "Word: " + blankWord;
-    document.getElementById("numberOfGuesses").textContent = "# of Guesses: " + guess;
-    document.getElementById("lettersGuessed").textContent = "Letters Guessed: " + joinedLettersGuessed;
-
-
-
 }
