@@ -71,6 +71,7 @@ document.onkeyup = function (event) {
         }
         if (blankWord === chosenWord) {
             wins++;
+            document.getElementById("winOrLose").textContent = "You win!";
             var newImage = document.getElementById("wordImage").src = "assets/images/" + chosenWord + ".jpg";
             document.getElementById('imageDiv').html = ("<img id = 'wordImage' src = " + newImage + ">");
             var wordImage = document.getElementById('wordImage');
@@ -85,7 +86,10 @@ document.onkeyup = function (event) {
         }
         if (guess === 0 && blankWord !== chosenWord) {
             losses++;
-            document.getElementById('imageDiv').html = ("<img id = 'wordImage' src = 'assets/images/dbzLose.jpg'>");
+            document.getElementById("winOrLose").textContent = "You lose...";
+            var newImage = document.getElementById("wordImage").src = "assets/images/dbzLose.jpg";
+            document.getElementById('imageDiv').html = ("<img id = 'wordImage' src = " + newImage + ">");
+            var wordImage = document.getElementById('wordImage');
             wordImage.style.width = "250px";
             wordImage.style.height = "250px";
             chosenWord = wordList[Math.floor(Math.random() * wordList.length)];
