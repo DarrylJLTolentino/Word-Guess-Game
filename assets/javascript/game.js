@@ -71,6 +71,8 @@ document.onkeyup = function (event) {
         }
         if (blankWord === chosenWord) {
             wins++;
+            var newImage = document.getElementById("wordImage").src = "assets/images/" + chosenWord + ".jpg";
+            document.getElementById('imageDiv').html("<img src = " + newImage + ">");
             chosenWord = wordList[Math.floor(Math.random() * wordList.length)];
             blankWord = createBlankWord(chosenWord);
             startUp(blankWord);
