@@ -44,6 +44,7 @@ startUp(blankWord);
 
 document.onkeyup = function (event) {
     var userInput = event.key;
+    console.log(event);
     var thatCharAgain = false;
     for (var i = 0; i < lettersGuessed.length; i++) {
         if (userInput === lettersGuessed[i]) {

@@ -2,6 +2,17 @@ body {
     background-image: url(../images/dbz-background.jpg);
 }
 
+h1 {
+    text-align: center;
+    margin-top: 170px;
+    margin: auto;
+    font-size: 100px;
+    background-color: black;
+    width: 70%;
+    padding: 10px;
+    color: red;
+}
+
 section {
     margin: auto;
     text-align: center;
@@ -9,5 +20,5 @@ section {
     color: red;
     width: 30%;
     padding: 10px 0px;
-    margin-top: 200px;
+    margin-top: 10px;
 }
