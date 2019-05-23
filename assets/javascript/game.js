@@ -7,8 +7,13 @@ var joinedLettersGuessed;
 
 function createBlankWord(chosenWord) {
     var blankWord = "-";
-    for (var i = 0; i < chosenWord.length - 1; i++) {
-        blankWord = blankWord + "-";
+    for (var i = 1; i < chosenWord.length; i++) {
+        if (chosenWord[i] === " ") {
+            blankWord = blankWord + " ";
+        }
+        else {
+            blankWord = blankWord + "-";
+        }
     };
     return blankWord;
 }
