@@ -54,7 +54,22 @@ document.onkeyup = function (event) {
     if (counter === chosenWord.length) {
         guess--;
     }
-
+    if (blankWord === chosenWord){
+        wins++;
+        chosenWord = wordList[Math.floor(Math.random() * wordList.length)];
+        blankWord = createBlankWord(chosenWord);
+        startUp(blankWord);
+        lettersGuessed = [];
+        joinedLettersGuessed = "";
+    }
+    if (guess === 0 && blankWord !== chosenWord) {
+        losses++;
+        chosenWord = wordList[Math.floor(Math.random() * wordList.length)];
+        blankWord = createBlankWord(chosenWord);
+        startUp(blankWord);
+        lettersGuessed = [];
+        joinedLettersGuessed = "";
+    }
     reWrite();
 
 }
