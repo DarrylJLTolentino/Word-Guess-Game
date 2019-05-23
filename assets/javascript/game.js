@@ -5,18 +5,15 @@ var lettersGuessed = [];
 var wordList = ["goku", "vegeta", "frieza", "cell", "krillin"];
 var joinedLettersGuessed;
 
-function createBlankWord() {
-    var chosenWord = wordList[Math.floor(Math.random() * wordList.length)];
+function createBlankWord(chosenWord) {
     var blankWord = "-";
     for (var i = 0; i < chosenWord.length - 1; i++) {
         blankWord = blankWord + "-";
     };
-    return chosenWord, blankWord;
+    return blankWord;
 }
 
-function startUp() {
-    var chosenWord, blankWord = createBlankWord();
-    document.getElementById("getStarted").textContent = "";
+function startUp(blankWord) {
     document.getElementById("wins").textContent = "Wins: " + wins;
     document.getElementById("losses").textContent = "Losses " + losses;
     document.getElementById("spacing").textContent = "-----------------";
@@ -35,7 +32,9 @@ function reWrite() {
     document.getElementById("lettersGuessed").textContent = "Letters Guessed: " + joinedLettersGuessed;
 }
 
-startUp();
+var chosenWord = wordList[Math.floor(Math.random() * wordList.length)];
+var blankWord = createBlankWord(chosenWord);
+startUp(blankWord);
 
 document.onkeyup = function (event) {
     var userInput = event.key;
@@ -44,7 +43,9 @@ document.onkeyup = function (event) {
     var counter = 0;
     for (var i = 0; i < chosenWord.length; i++) {
         if (userInput === chosenWord[i]) {
-            blankword[i] = chosenWord[i];
+            var newBlank = blankWord.split('');
+            newBlank[i] = chosenWord[i];
+            blankWord = newBlank.join('');
         }
         else {
             counter++;
@@ -53,6 +54,7 @@ document.onkeyup = function (event) {
     if (counter === chosenWord.length) {
         guess--;
     }
-    
+
+    reWrite();
 
 }
