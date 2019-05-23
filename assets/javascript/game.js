@@ -8,7 +8,7 @@ var joinedLettersGuessed;
 function createBlankWord() {
     var chosenWord = wordList[Math.floor(Math.random() * wordList.length)];
     var blankWord = "-";
-    for(var i = 0; i < chosenWord.length - 1; i++){
+    for (var i = 0; i < chosenWord.length - 1; i++) {
         blankWord = blankWord + "-";
     };
     return chosenWord, blankWord;
@@ -39,9 +39,20 @@ startUp();
 
 document.onkeyup = function (event) {
     var userInput = event.key;
-
     lettersGuessed.push(userInput);
-    
     joinedLettersGuessed = lettersGuessed.join(",");
+    var counter = 0;
+    for (var i = 0; i < chosenWord.length; i++) {
+        if (userInput === chosenWord[i]) {
+            blankword[i] = chosenWord[i];
+        }
+        else {
+            counter++;
+        }
+    }
+    // if (counter === chosenword.length) {
+    //     guess--;
+    // }
+    
 
 }
