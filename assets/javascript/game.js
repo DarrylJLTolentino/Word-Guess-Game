@@ -2,7 +2,7 @@ var wins = 0;
 var losses = 0;
 var guess = 9;
 var lettersGuessed = [];
-var wordList = ["goku", "vegeta", "frieza", "cell", "krillin"];
+var wordList = ["goku", "vegeta", "frieza", "cell", "krillin", "gohan", "majin buu", "trunks", "bulma", "piccolo", "chi-chi", "android 18", "goten", "videl", "master roshi", "nappa", "yamcha", "android 17", "raditz", "pan", "mr satan", "tien", "ginyu", "mr popo", "dabura", "chiaotzu", "android 16"];
 var joinedLettersGuessed;
 
 function createBlankWord(chosenWord) {
@@ -46,7 +46,7 @@ document.onkeyup = function (event) {
         }
     }
 
-    if (thatCharAgain !== true && event.keyCode >= 65 && event.keyCode <= 90) {
+    if (thatCharAgain !== true && event.keyCode >= 48 && event.keyCode <= 90) {
         lettersGuessed.push(userInput);
         joinedLettersGuessed = lettersGuessed.join(",");
         var counter = 0;
