@@ -18,5 +18,8 @@ This is a website that features a hangman game that requires the user to press l
 | ---------- | --------- |
 | Github | https://github.com/
 
-<!-- ## Author
-- Darryl Tolentino -->
+## Author
+- Darryl Tolentino
+
+## Acknowledgement
+- Jake Dudum: For inspiration to do an anime-themed project
