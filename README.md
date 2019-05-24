@@ -8,6 +8,15 @@ This is a website that features a hangman game that requires the user to press l
 
 | Technology Used | Reference |
 | --------------- | --------- |
-| HTML | [https://developer.mozilla.org/en-US/docs/Web/HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) |
-| CSS | [https://developer.mozilla.org/en-US/docs/Web/CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) |
-| JavaScript | [https://www.javascript.com/](https://www.javascript.com/) |
+| HTML | https://developer.mozilla.org/en-US/docs/Web/HTML |
+| CSS | https://developer.mozilla.org/en-US/docs/Web/CSS |
+| JavaScript | https://www.javascript.com/ |
+
+######
+
+| Versioning | Reference |
+| ---------- | --------- |
+| Github | https://github.com/
+
+<!-- ## Author
+- Darryl Tolentino -->
